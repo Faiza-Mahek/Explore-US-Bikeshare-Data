@@ -1,0 +1,76 @@
+Explore US Bikeshare Data
+=========================
+
+Overview
+--------
+This project provides an interactive Flask-based web application for exploring
+bikeshare data from three major US cities: **Chicago**, **New York City**, and
+**Washington**. Users can filter data by month and/or day, generate descriptive
+statistics, and view raw data in small increments.
+
+Project Structure
+-----------------
+Explore_US_Bikeshare_Data
+│
+├── data
+│   ├── chicago.csv
+│   ├── new_york_city.csv
+│   └── washington.csv
+│
+├── static
+│   └── css
+│       └── style.css
+│
+├── templates
+│   ├── home.html
+│   ├── filter.html
+│   ├── results.html
+│   └── raw_data.html
+│
+├── bikeshare.py
+├── main_app.py
+├── Documentation.txt
+└── requirements.txt
+
+Key Components
+--------------
+- **bikeshare.py**  
+  Loads and filters the CSV data, and computes time, station, trip duration, and user stats.
+- **main_app.py**  
+  Manages Flask routes (Home, Filter, Results, Raw Data), stores user selections in the session, and renders templates.
+- **templates**  
+  HTML files for each page (Home, Filter, Results, Raw Data) to display user interface elements.
+- **static/css/style.css**  
+  Single-theme (light mode) styling with a purple-to-blue gradient hero section and a styled raw data table.
+
+Setup & Installation
+--------------------
+1. **Install Python 3** if not already installed.
+2. **Create and activate a virtual environment** (recommended):env\Scripts\activate (on Windows) or python -m venv env env\Scripts\activate (on Windows)
+   
+3. **Install dependencies**:  pip install -r requirements.txt  
+4. **Place CSV files** (chicago.csv, new_york_city.csv, washington.csv) in the `data` folder if not already present.
+
+Usage Instructions
+------------------
+1. **Run the application**: python main_app.py  
+2. **Open** `http://127.0.0.1:5000/` in your web browser:
+- **Home Page**: Overview and quick links.
+- **Filter Page**: Select city, month, and/or day.
+- **Results Page**: Displays computed stats (popular times, stations, trip durations, user info).
+- **Raw Data Page**: Shows 5 rows of raw data at a time, with “Next” and “Back” options.
+
+Resources
+------------------
+1.ChatGpt o3-mini-high
+2.DeepSeek
+ 
+Additional Notes
+---------------
+- Flask sessions store the user’s city, month, and day selections for filtering.
+- The design uses a purple-to-blue gradient, aligning with Accenture-like styling.
+- The raw data table is scrollable horizontally if columns exceed container width.
+
+Contact
+-------
+For questions or improvements, please contact the email id : faizamahek90@gmail.com
